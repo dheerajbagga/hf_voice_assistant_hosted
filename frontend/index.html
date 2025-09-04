@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HF Voice Assistant (Hosted)</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 2rem; max-width: 720px; }
+    button { padding: 0.6rem 1rem; margin-right: 0.5rem; }
+    .row { margin: 1rem 0; }
+    #transcript, #reply { white-space: pre-wrap; background:#f7f7f7; padding:1rem; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <h1>Hugging Face Voice Assistant (Hosted Models)</h1>
+  <div class="row">
+    <button id="recBtn">🎙️ Start Recording</button>
+    <button id="stopBtn" disabled>⏹️ Stop</button>
+    <button id="sendBtn" disabled>➡️ Send to Assistant</button>
+  </div>
+
+  <div class="row">
+    <h3>Transcript</h3>
+    <div id="transcript">—</div>
+  </div>
+
+  <div class="row">
+    <h3>Assistant Reply</h3>
+    <div id="reply">—</div>
+    <audio id="audio" controls></audio>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
